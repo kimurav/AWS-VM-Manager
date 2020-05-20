@@ -1,0 +1,40 @@
+instances:
+    - instance:
+        ami: ami-0fa94ecf2fef3420b
+        os-image-name: Linux
+        instance-tag: Linux-1
+        type: t2.micro
+        key-name: instance_ssh_key
+        docker-images:
+        - image:
+            name: gcc
+            command: sudo docker pull gcc
+        - image:
+            name: golang
+            command: sudo docker pull golang
+        - image:
+            name: julia
+            command: sudo docker pull julia
+        - image:
+            name: swift
+            command: sudo docker pull swift
+    - instance:
+        ami: ami-0fa94ecf2fef3420b
+        os-image-name: Linux
+        instance-tag: Linux-2
+        type: t2.micro
+        key-name: instance_ssh_key
+        docker-images:
+        - image:
+            name: gcc
+            command: sudo docker pull gcc
+        - image:
+            name: golang
+            command: sudo docker pull golang
+        - image:
+            name: julia
+            command: sudo docker pull julia
+        - image:
+            name: swift
+            command: sudo docker pull swift
+ssh-key: instance_ssh_key
